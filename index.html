@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport essencial para celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Mulher | Tabela de Preços</title>
+
+    <!-- Ícones Fineline (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Fontes (Playfair Display para títulos, Lato para leitura) -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO (Agora centralizado e limpo) -->
+    <header class="main-header">
+        <div class="container header-center">
+            <h1 class="logo">Espaço <span class="text-pink">Mulher</span></h1>
+        </div>
+    </header>
+
+    <!-- HERO (Capa Visual) -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h2>Realce sua beleza</h2>
+            <p>Confira nossa tabela de serviços abaixo</p>
+            <div class="scroll-indicator">
+                <i class="ph ph-caret-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PREÇOS (Lista Vertical) -->
+    <section class="pricing-section">
+        <div class="container">
+            
+            <!-- DIV 1: MANICURE -->
+            <!-- A classe 'reveal' será usada pelo JS para animar -->
+            <div class="price-card reveal">
+                <div class="card-header">
+                    <i class="ph ph-hand-soap icon-title"></i>
+                    <h3>Manicure & Pedicure</h3>
+                </div>
+                <ul class="price-list">
+                    <li>
+                        <span class="service-name">Mão</span>
+                        <span class="service-price">R$ 25,00</span>
+                    </li>
+                    <li>
+                        <span class="service-name">Pé</span>
+                        <span class="service-price">R$ 25,00</span>
+                    </li>
+                    <li>
+                        <span class="service-name">Mão e pé</span>
+                        <span class="service-price">R$ 50,00</span>
+                    </li>
+                    <li>
+                        <span class="service-name">Spa dos pés</span>
+                        <span class="service-price">R$ 60,00</span>
+                    </li>
+                    <li>
+                        <span class="service-name">Alongamento em gel</span>
+                        <span class="service-price">R$ 120,00</span>
+                    </li>
+                    <li>
+                        <span class="service-name">Blindagem em gel</span>
+                        <span class="service-price">R$ 70,00</span>
+                    </li>
+                    <li>
+                        <span class="service-name">Esmaltação em gel</span>
+                        <span class="service-price">R$ 50,00</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- DIV 2: SOBRANCELHAS -->
+            <div class="price-card reveal">
+                <div class="card-header">
+                    <i class="ph ph-eye icon-title"></i>
+                    <h3>Sobrancelhas</h3>
+                </div>
+                <ul class="price-list">
+                    <li>
+                        <span class="service-name">Design com henna</span>
+                        <span class="service-price">R$ 30,00</span>
+                    </li>
+                    <li>
+                        <span class="service-name">Design simples</span>
+                        <span class="service-price">R$ 25,00</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- DIV 3: CÍLIOS -->
+            <div class="price-card reveal">
+                <div class="card-header">
+                    <i class="ph ph-sparkle icon-title"></i>
+                    <h3>Extensão de Cílios</h3>
+                </div>
+                <div class="price-group">
+                    <h4>Volume Fox Eyes</h4>
+                    <div class="price-row">
+                        <span>Aplicação</span> <strong>R$ 105,00</strong>
+                    </div>
+                    <div class="price-row secondary">
+                        <span>Manutenção (15-20 dias)</span> <strong>R$ 86,00</strong>
+                    </div>
+                </div>
+
+                <div class="price-group">
+                    <h4>Volume Natural</h4>
+                    <div class="price-row">
+                        <span>Aplicação</span> <strong>R$ 75,00</strong>
+                    </div>
+                    <div class="price-row secondary">
+                        <span>Manutenção (15 dias)</span> <strong>R$ 58,00</strong>
+                    </div>
+                </div>
+
+                <div class="price-group">
+                    <h4>Volume Brasileiro</h4>
+                    <div class="price-row">
+                        <span>Aplicação</span> <strong>R$ 90,00</strong>
+                    </div>
+                    <div class="price-row secondary">
+                        <span>Manutenção (15-25 dias)</span> <strong>R$ 75,00</strong>
+                    </div>
+                </div>
+
+                <div class="price-group">
+                    <h4>Volume Jasmim 5D</h4>
+                    <div class="price-row">
+                        <span>Aplicação</span> <strong>R$ 110,00</strong>
+                    </div>
+                    <div class="price-row secondary">
+                        <span>Manutenção (15-23 dias)</span> <strong>R$ 85,00</strong>
+                    </div>
+                </div>
+
+                <div class="price-group">
+                    <h4>Vol. Brasileiro Marrom</h4>
+                    <div class="price-row">
+                        <span>Aplicação</span> <strong>R$ 95,00</strong>
+                    </div>
+                    <div class="price-row secondary">
+                        <span>Manutenção (15-25 dias)</span> <strong>R$ 80,00</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIV 4: DEPILAÇÃO -->
+            <div class="price-card reveal">
+                <div class="card-header">
+                    <i class="ph ph-drop icon-title"></i>
+                    <h3>Depilação com Cera</h3>
+                </div>
+                <ul class="price-list">
+                    <li><span class="service-name">Buço</span> <span class="service-price">R$ 10,00</span></li>
+                    <li><span class="service-name">Axilas</span> <span class="service-price">R$ 15,00</span></li>
+                    <li><span class="service-name">Perna inteira</span> <span class="service-price">R$ 25,00</span></li>
+                    <li><span class="service-name">Virilha</span> <span class="service-price">R$ 40,00</span></li>
+                </ul>
+            </div>
+
+            <!-- DIV 5: CABELO -->
+            <div class="price-card reveal">
+                <div class="card-header">
+                    <i class="ph ph-scissors icon-title"></i>
+                    <h3>Cabelos</h3>
+                </div>
+                <p class="obs">*O preço pode variar de acordo com o tamanho do cabelo</p>
+                
+                <ul class="price-list">
+                    <li><span class="service-name">Tinta da cliente + escova</span> <span class="service-price">R$ 65,00</span></li>
+                    <li><span class="service-name">Tinta do salão + escova</span> <span class="service-price">R$ 90,00</span></li>
+                    <li><span class="service-name">Corte</span> <span class="service-price">R$ 35,00</span></li>
+                    <li><span class="service-name">Escova</span> <span class="service-price">R$ 40,00</span></li>
+                    <li><span class="service-name">Escova com cachos</span> <span class="service-price">R$ 60,00</span></li>
+                    <li><span class="service-name">Escova com chapinha</span> <span class="service-price">R$ 55,00</span></li>
+                    <li><span class="service-name">Hidratação com escova</span> <span class="service-price">R$ 75,00</span></li>
+                    <li><span class="service-name">Hidratação Truss</span> <span class="service-price">R$ 45,00</span></li>
+                    <li><span class="service-name">Hidratação Simples</span> <span class="service-price">R$ 35,00</span></li>
+                    <li><span class="service-name">Plástica com formol</span> <span class="service-price">R$ 120,00</span></li>
+                    <li><span class="service-name">Plástica sem formol</span> <span class="service-price">R$ 160,00</span></li>
+                    <li><span class="service-name">Retoque de raiz</span> <span class="service-price">R$ 50,00</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER / REDES SOCIAIS (Abaixo de tudo) -->
+    <footer class="main-footer">
+        <div class="container footer-col">
+            <h3>Agende seu horário</h3>
+            <p>Entre em contato pelas redes sociais</p>
+            
+            <div class="social-buttons">
+                <!-- Botão WhatsApp -->
+                <a href="https://wa.me/5517981006453" target="_blank" class="btn-social whatsapp">
+                    <i class="ph ph-whatsapp-logo"></i> Chamar no WhatsApp
+                </a>
+                
+                <!-- Botão Instagram -->
+                <a href="https://www.instagram.com/espacomulher2439?igsh=MTdmMTJrY3dzMHkyeA==" target="_blank" class="btn-social instagram">
+                    <i class="ph ph-instagram-logo"></i> Ver no Instagram
+                </a>
+            </div>
+
+            <p class="copyright">&copy; 2024 Espaço Mulher</p>
+        </div>
+    </footer>
+
+    <!-- Script JS para animações -->
+    <script src="script.js"></script>
+</body>
+</html>

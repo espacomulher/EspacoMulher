@@ -216,7 +216,41 @@
         </div>
     </footer>
 
-    <!-- Script JS para animações -->
+    <!-- BOTÃO FLUTUANTE DE AGENDAMENTO -->
+    <button class="fab-btn" onclick="abrirModal()">
+        <i class="ph ph-calendar-check"></i> Agendar Agora
+    </button>
+
+    <!-- O FORMULÁRIO (MODAL) -->
+    <div id="modalPedido" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharModal()">&times;</span>
+            
+            <div class="modal-header">
+                <h3>Faça seu Pedido</h3>
+                <p>Envie diretamente para nosso WhatsApp</p>
+            </div>
+
+            <form id="formWhatsapp" onsubmit="enviarParaWhatsapp(event)">
+                <div class="input-group">
+                    <label for="nomeCliente">Seu Nome:</label>
+                    <input type="text" id="nomeCliente" placeholder="Ex: Carla" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="pedidoCliente">Quais serviços deseja?</label>
+                    <textarea id="pedidoCliente" rows="4" placeholder="Ex: Quero fazer pé e mão e sobrancelha..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="ph ph-whatsapp-logo"></i> Enviar Pedido
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script JS -->
     <script src="script.js"></script>
 </body>
+
 </html>

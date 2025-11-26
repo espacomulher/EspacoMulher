@@ -1,12 +1,12 @@
 /* --- CONFIGURAÇÕES GERAIS --- */
 :root {
-    --bg-color: #f9f9f9;        /* Fundo geral (cinza quase branco) */
-    --card-bg: #ffffff;         /* Fundo dos cartões */
-    --text-primary: #1a1a1a;    /* Texto principal (Preto suave) */
-    --text-secondary: #555555;  /* Texto secundário */
+    --bg-color: #f9f9f9;        /* Fundo geral */
+    --card-bg: #ffffff;         /* Fundo dos cartões e seções */
+    --text-primary: #1a1a1a;    /* Preto suave */
+    --text-secondary: #555555;  /* Cinza escuro */
     --pink-accent: #dba4b6;     /* Rosa sofisticado (Fineline) */
     --pink-vibrant: #e91e63;    /* Rosa forte para botões */
-    --header-bg: #111111;       /* Cabeçalho preto */
+    --header-bg: #111111;       /* Preto absoluto */
     
     --font-title: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
@@ -21,15 +21,16 @@ body {
     line-height: 1.6;
 }
 
+/* Container padrão para limitar a largura */
 .container {
-    max-width: 800px; /* Largura controlada para leitura fácil */
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto; /* Isso centraliza o container na tela */
     padding: 0 20px;
 }
 
 .text-pink { color: var(--pink-accent); }
 
-/* --- HEADER --- */
+/* --- HEADER (CABEÇALHO) --- */
 .main-header {
     background-color: var(--header-bg);
     padding: 20px 0;
@@ -42,7 +43,8 @@ body {
 
 .header-center {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centraliza o logo horizontalmente */
+    align-items: center;
 }
 
 .logo {
@@ -54,12 +56,12 @@ body {
     letter-spacing: 2px;
 }
 
-/* --- HERO --- */
+/* --- HERO (CAPA) --- */
 .hero {
-    height: 50vh; /* Altura menor para focar nos preços */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('foto fundo.jpg');
+    height: 40vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
-    background-position: 60% 90%;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +87,7 @@ body {
     60% {transform: translateY(-5px);}
 }
 
-/* --- SEÇÃO DE PREÇOS (CARDS) --- */
+/* --- SEÇÃO DE PREÇOS --- */
 .pricing-section {
     padding: 40px 0;
 }
@@ -94,17 +96,16 @@ body {
     background-color: var(--card-bg);
     border-radius: 12px;
     padding: 30px;
-    margin-bottom: 30px; /* Espaço entre as Divs */
+    margin-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-left: 5px solid var(--pink-accent); /* Detalhe lateral rosa */
+    border-left: 5px solid var(--pink-accent);
     
-    /* Prepara para animação */
+    /* Animação */
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease-out;
 }
 
-/* Classe ativa adicionada pelo JS */
 .price-card.active {
     opacity: 1;
     transform: translateY(0);
@@ -137,17 +138,15 @@ body {
     font-style: italic;
 }
 
-/* Lista Simples (Manicure, Depilação) */
-.price-list {
-    list-style: none;
-}
+/* Listas de Preços */
+.price-list { list-style: none; }
 
 .price-list li {
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
     padding-bottom: 5px;
-    border-bottom: 1px dotted #ddd; /* Linha pontilhada estilo "recibo" */
+    border-bottom: 1px dotted #ddd;
 }
 
 .price-list li:last-child { border: none; }
@@ -155,7 +154,6 @@ body {
 .service-name { font-weight: 400; }
 .service-price { font-weight: 700; color: var(--text-primary); }
 
-/* Grupos Complexos (Cílios) */
 .price-group {
     background-color: #fafafa;
     padding: 15px;
@@ -181,7 +179,47 @@ body {
     margin-top: 5px;
 }
 
-/* --- FOOTER E REDES SOCIAIS --- */
+/* --- SEÇÃO DE LOCALIZAÇÃO (MAPA) --- */
+/* Aqui está a correção para centralizar */
+.location-section {
+    background-color: var(--card-bg); /* Fundo branco para destacar */
+    padding: 60px 20px;
+    text-align: center; /* Centraliza o texto (H2 e P) */
+    margin-top: 20px;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    height: 400px; /* Altura fixa para o mapa */
+    margin: 0 auto; /* Centraliza a caixa do mapa na tela */
+    border-radius: 15px;
+    overflow: hidden; /* Garante que as bordas redondas funcionem */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 2px solid var(--pink-accent); /* Borda rosa fina */
+}
+
+/* Força o iframe do Google a ocupar todo o espaço da caixa */
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block; /* Remove espaços brancos abaixo do iframe */
+}
+
+/* --- FOOTER --- */
 .main-footer {
     background-color: #111;
     color: white;
@@ -189,14 +227,9 @@ body {
     text-align: center;
 }
 
-.footer-col h3 {
-    font-family: var(--font-title);
-    margin-bottom: 10px;
-}
-
 .social-buttons {
     display: flex;
-    flex-direction: column; /* Botões um embaixo do outro no celular */
+    flex-direction: column;
     gap: 15px;
     max-width: 300px;
     margin: 30px auto;
@@ -216,15 +249,8 @@ body {
 
 .btn-social:hover { transform: scale(1.05); }
 
-.whatsapp {
-    background-color: #25D366;
-    color: white;
-}
-
-.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: white;
-}
+.whatsapp { background-color: #25D366; color: white; }
+.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; }
 
 .copyright {
     color: #555;
@@ -232,7 +258,7 @@ body {
     margin-top: 30px;
 }
 
-/* --- BOTÃO FLUTUANTE (FAB) --- */
+/* --- BOTÃO FLUTUANTE (FAB) E MODAL --- */
 .fab-btn {
     position: fixed;
     bottom: 30px;
@@ -254,10 +280,7 @@ body {
     animation: pulse 2s infinite;
 }
 
-.fab-btn:hover {
-    transform: scale(1.1);
-    background-color: #d81b60;
-}
+.fab-btn:hover { transform: scale(1.1); background-color: #d81b60; }
 
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.7); }
@@ -265,15 +288,15 @@ body {
     100% { box-shadow: 0 0 0 0 rgba(233, 30, 99, 0); }
 }
 
-/* --- MODAL (JANELA DO FORMULÁRIO) --- */
+/* Modal */
 .modal-overlay {
-    display: none; /* Escondido por padrão */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro transparente */
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -318,20 +341,9 @@ body {
     margin-bottom: 20px;
 }
 
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 0.9rem;
-}
-
-.input-group input,
-.input-group textarea {
+.input-group { margin-bottom: 15px; text-align: left; }
+.input-group label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+.input-group input, .input-group textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
@@ -339,12 +351,11 @@ body {
     font-family: var(--font-body);
     font-size: 1rem;
 }
-
 .input-group textarea { resize: vertical; }
 
 .btn-submit {
     width: 100%;
-    background-color: #25D366; /* Verde WhatsApp */
+    background-color: #25D366;
     color: white;
     border: none;
     padding: 15px;
@@ -360,41 +371,3 @@ body {
 }
 
 .btn-submit:hover { background-color: #1ebc57; }
-
-/* --- ESTILO DO MAPA --- */
-.location-section {
-    margin-top: 40px;
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-left: 5px solid var(--pink-accent); /* Mantendo a identidade visual */
-}
-
-.centered-header {
-    justify-content: center; /* Centraliza o título e ícone do mapa */
-}
-
-.map-container {
-    margin-top: 20px;
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden; /* Garante que o mapa respeite as bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    position: relative;
-}
-
-/* Faz o iframe preencher o espaço e ficar responsivo */
-.map-container iframe {
-    width: 100%;       /* Ocupa toda a largura disponível */
-    height: 400px;     /* Altura fixa boa para celular e PC */
-    border: 0;
-    display: block;    /* Remove espaços extras abaixo do iframe */
-}
-
-/* Ajuste de altura para celulares muito pequenos */
-@media (max-width: 480px) {
-    .map-container iframe {
-        height: 300px;
-    }
-}

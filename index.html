@@ -194,27 +194,30 @@
         </div>
     </section>
 
-    <!-- FOOTER / REDES SOCIAIS (Abaixo de tudo) -->
-    <footer class="main-footer">
-        <div class="container footer-col">
-            <h3>Agende seu horário</h3>
-            <p>Entre em contato pelas redes sociais</p>
-            
-            <div class="social-buttons">
-                <!-- Botão WhatsApp -->
-                <a href="https://wa.me/5517981006453" target="_blank" class="btn-social whatsapp">
-                    <i class="ph ph-whatsapp-logo"></i> Chamar no WhatsApp
-                </a>
-                
-                <!-- Botão Instagram -->
-                <a href="https://www.instagram.com/espacomulher2439?igsh=MTdmMTJrY3dzMHkyeA==" target="_blank" class="btn-social instagram">
-                    <i class="ph ph-instagram-logo"></i> Ver no Instagram
-                </a>
-            </div>
+        <!-- SEÇÃO MAPA / LOCALIZAÇÃO -->
+            <section class="location-section reveal">
+                <div class="card-header centered-header">
+                    <i class="ph ph-map-pin icon-title"></i>
+                    <h3>Nossa Localização</h3>
+                </div>
+                <p class="obs" style="text-align: center;">Rua 22,  13x15 <br> número: 1068 <br> Barretos, SP</p>
 
-            <p class="copyright">&copy; 2025 Espaço Mulher</p>
-        </div>
-    </footer>
+                <div class="map-container">
+                    <!-- O seu iframe ajustado para ser responsivo -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!4v1764120860030!6m8!1m7!1ssNDwcvEWTi3QiKvpotAvww!2m2!1d-20.56149277195101!2d-48.56827423233351!3f219.67504719338206!4f-2.4093927174402268!5f1.2016855521968774" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+
+        </div> <!-- Fechamento da div container principal -->
+    </section> <!-- Fechamento da section pricing-section -->
+
+    <!-- FOOTER / REDES SOCIAIS (Isso aqui já existe no seu código, o mapa fica acima disso) -->
+    <footer class="main-footer">
 
     <!-- BOTÃO FLUTUANTE DE AGENDAMENTO -->
     <button class="fab-btn" onclick="abrirModal()">
@@ -234,7 +237,7 @@
             <form id="formWhatsapp" onsubmit="enviarParaWhatsapp(event)">
                 <div class="input-group">
                     <label for="nomeCliente">Seu Nome:</label>
-                    <input type="text" id="nomeCliente" placeholder="" required>
+                    <input type="text" id="nomeCliente" placeholder="Insira seu nome" required>
                 </div>
 
                 <div class="input-group">
@@ -252,7 +255,32 @@
     <!-- Script JS -->
     <script src="script.js"></script>
 </body>
-
 </html>
 
+    <!-- FOOTER / REDES SOCIAIS (Abaixo de tudo) -->
+    <footer class="main-footer">
+        <div class="container footer-col">
+            <h3>Agende seu horário</h3>
+            <p>Entre em contato pelas redes sociais</p>
+            
+            <div class="social-buttons">
+                <!-- Botão WhatsApp -->
+                <a href="https://wa.me/5517981006453" target="_blank" class="btn-social whatsapp">
+                    <i class="ph ph-whatsapp-logo"></i> Chamar no WhatsApp
+                </a>
+                
+                <!-- Botão Instagram -->
+                <a href="https://www.instagram.com/espacomulher2439?igsh=MTdmMTJrY3dzMHkyeA==" target="_blank" class="btn-social instagram">
+                    <i class="ph ph-instagram-logo"></i> Ver no Instagram
+                </a>
+            </div>
 
+            <p class="copyright">&copy; 2024 Espaço Mulher</p>
+        </div>
+    </footer>
+    
+
+    <!-- Script JS para animações -->
+    <script src="script.js"></script>
+</body>
+</html>
